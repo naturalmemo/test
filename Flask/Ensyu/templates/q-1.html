@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Q1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <br />
+
+    <h1>{{name}}さんが {{prefecture}} {{city}}に住んでいる年数をお知らせください。</h1>
+
+    <form action="/q_2" method="POST">
+      <input type="hidden" name="page" value="1" />
+      <br /><input type="text" name="answer1" />
+
+      <br /><input type="submit" value="送信" />
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="model.User" %>
+  
+<%
+User loginUser = (User) session.getAttribute("loginUser");
+%>   
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q4</title>
+<link rel = "stylesheet" href="css/style.css">
+</head>
+<body>
+
+<br>
+今後も、<%= loginUser.getPrefecture() %><%= loginUser.getCity() %>に住み続けたいと思いますか。
+<form action="/index" method="post">
+<input type="hidden" name="page" value="4">
+<br><input type="text" name = "answer4">
+<input type="submit" value="送信">
+</form>
+</body>
+</html>

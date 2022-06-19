@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="model.User" %>
+   
+<%
+User loginUser = (User) session.getAttribute("loginUser");
+%>   
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q5</title>
+<link rel = "stylesheet" href="css/style.css">
+</head>
+<body>
+
+<br>
+<%= loginUser.getPrefecture() %><%= loginUser.getCity() %>に対してご意見・ご要望がございましたら、ご自由にお書きください。
+<form action="/index" method="post">
+<br><input type="textarea" name = "answer5">
+<input type="hidden" name="page" value="5">
+<input type="submit" value="送信">
+</form>
+</body>
+</html>

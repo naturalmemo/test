@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>サンプル</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>ようこそ</h2>
+      <hr />
+      お選びください。<br /><br />
+      <form action="http://localhost:5000/Sample2" method="GET">
+        <p>
+          {{message1}} です。 <input type="submit" value="選択" class="btn" />
+        </p>
+      </form>
+      <form action="http://localhost:5000/Sample2" method="POST">
+        <p>
+          {{message2}} です。
+          <input type="submit" value="選択" class="btn" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
